@@ -6,7 +6,7 @@ export const login = user => {
         data: {user}
     })
 }
-export const singup = user => {
+export const signup = user => {
     return $.ajax({
         method: 'POST',
         url: 'api/users',
