@@ -14,17 +14,20 @@ class UsersIndex extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='users-index-main'>
                 <h1>Meet the crew!</h1>
-                {this.props.users.map((user) => {
-                    return (
-                        <UserIndexItem 
-                            user={user}
-                            fetchUser={this.props.fetchUser}
-                            key={user.id}
-                        />
-                    )
-                })}
+                <div className='users-index'>
+                    {this.props.users.map((user) => {
+                        return (
+                            <UserIndexItem 
+                                user={user}
+                                fetchUser={this.props.fetchUser}
+                                key={user.id}
+                            />
+                        )
+                    })}
+
+                </div>
             </div>
         )
     }

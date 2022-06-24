@@ -9,8 +9,8 @@ class SessionForm extends React.Component {
             username: '',
             password: '',
             email: '',
-            firstName: '',
-            lastName: ''
+            first_name: '',
+            last_name: ''
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -97,7 +97,7 @@ class SessionForm extends React.Component {
                     type="text"
                     placeholder="first name"
                     value={this.state.firstName}
-                    onChange={this.update('firstName')}
+                    onChange={this.update('first_name')}
                     required
                 />
                 <br />
@@ -106,7 +106,7 @@ class SessionForm extends React.Component {
                     type="text"
                     placeholder="last name"
                     value={this.state.lastName}
-                    onChange={this.update('lastName')}
+                    onChange={this.update('last_name')}
                     required
                 />
                 <br />
