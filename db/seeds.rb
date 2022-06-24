@@ -11,4 +11,4 @@ User.destroy_all
 dave = User.create!(username: 'dLister', first_name: 'David', last_name: 'Lister', age: 25, password: 'reddwarf', email: 'dlister@reddwarf.com')
 dave = User.create!(username: 'Cat', first_name: 'The', last_name: 'Cat', age: 25, password: 'reddwarf', email: 'tcat@reddwarf.com')
 dave = User.create!(username: 'smegHead', first_name: 'Arnold', last_name: 'Rimmer', age: 25, password: 'reddwarf', email: 'arimmer@reddwarf.com')
-dave = User.create!(username: 'kryton', first_name: 'Kryton', last_name: '4000', age: 25, password: 'reddwarf', email: 'kryton@reddwarf.com')
+dave = User.create!(username: 'kryton', first_name: 'Kryton', last_name: '4000 Series Android', age: 25, password: 'reddwarf', email: 'kryton@reddwarf.com')

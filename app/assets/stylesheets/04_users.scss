@@ -1,0 +1,27 @@
+.user-icon {
+    height: 50px;
+    width: 50px;
+    background-image: url("user_icon.png");
+    background-size: contain;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.user-index-item-card {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 0 5px 10px 5px;
+}
+
+.icon-username {
+    display: flex;
+    align-items: center;
+}
+
+.icon-username > h3 {
+    margin-left: 5px;
+}
