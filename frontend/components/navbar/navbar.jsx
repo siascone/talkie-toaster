@@ -10,7 +10,7 @@ class Navbar extends React.Component {
 
     handleLogout() {
         this.props.logout()
-            // .then(() => this.props.history.push('/'));
+            .then(() => this.props.history.push('/login'));
     }
 
     render() {
@@ -20,7 +20,7 @@ class Navbar extends React.Component {
         if (this.props.currentUser) {
             greeting = <div className='greeting-logged-in'>
                 <p className='greeting-message'>Welcome, {this.props.currentUser.username}</p>
-                <button className="logout" onClick={ this.handleLogout }>Logout</button>
+                <button className="logout-button" onClick={ this.handleLogout }>Logout</button>
             </div>
         } else {
             greeting = <div className='greeting-logged-out'>
@@ -31,7 +31,7 @@ class Navbar extends React.Component {
 
         return (
             <div className='navbar'>
-                <Link className='logo-link' to='/'>
+                <Link className='home-link' to='/'>
                     <div className="nav-left">
                         <p>Talkie Toaster</p>
                     </div>

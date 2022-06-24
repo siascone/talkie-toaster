@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.greeting-logged-out, .greeting-logged-in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greeting-logged-in > * {
+    padding-left: 5px;
+    padding-right: 5px;
+} 
+
+.greeting-logged-out > * {
+    padding-left: 5px;
+    padding-right: 5px;
+}

@@ -8,7 +8,9 @@ class SessionForm extends React.Component {
         this.state = {
             username: '',
             password: '',
-            email: ''
+            email: '',
+            firstName: '',
+            lastName: ''
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -62,16 +64,15 @@ class SessionForm extends React.Component {
 
     render() {
 
-        let fields;
+        let inputs;
         let signupLoginLink
 
 
         if (this.props.formType === 'Signup') {
             signupLoginLink = <p className='signup-login-link'>
-                Already have an account?
-                <Link to='/login'>Login</Link>
+                Already have an account? <Link to='/login'>Login</Link>
             </p>
-            fields = <div className='session-form-fields'>
+            inputs = <div className='session-form-inputs'>
 
                 <input
                     id="username"
@@ -81,7 +82,7 @@ class SessionForm extends React.Component {
                     onChange={this.update('username')}
                     required
                 />
-
+                <br />
                 <input
                     id="email"
                     type="email"
@@ -90,7 +91,25 @@ class SessionForm extends React.Component {
                     onChange={this.update('email')}
                     required
                 />
-
+                <br />
+                <input
+                    id="first-name"
+                    type="text"
+                    placeholder="first name"
+                    value={this.state.firstName}
+                    onChange={this.update('firstName')}
+                    required
+                />
+                <br />
+                <input
+                    id="last-name"
+                    type="text"
+                    placeholder="last name"
+                    value={this.state.lastName}
+                    onChange={this.update('lastName')}
+                    required
+                />
+                <br />
                 <input
                     id="password"
                     type="password"
@@ -102,10 +121,9 @@ class SessionForm extends React.Component {
             </div>
         } else {
             signupLoginLink = <p className='signup-login-link'>
-                Don't have an account yet?
-                <Link to='/signup'>Sign Up</Link>
+                Don't have an account yet? <Link to='/signup'> Sign Up</Link>
             </p>
-            fields = <div className='session-form-fields'>
+            inputs = <div className='session-form-inputs'>
                 <label htmlFor="username"></label>
                 <input
                     id="username"
@@ -115,7 +133,7 @@ class SessionForm extends React.Component {
                     onChange={this.update('username')}
                     required
                 />
-
+                <br />
                 <input
                     id="password"
                     type="password"
@@ -135,9 +153,10 @@ class SessionForm extends React.Component {
 
 
         return (
-            <div className='modal'>
+            <div className='session-form-main'>
                 <form className='session-form' onSubmit={this.handleSubmit} noValidate>
-                    {fields}
+                    {inputs}
+                    <br />
                     <button className="session-form-submit"
                         type='submit'>
                         {this.props.formType}

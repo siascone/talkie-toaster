@@ -1,0 +1,24 @@
+.session-form-main {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 0 auto;
+    margin-top: 5em;
+    width: 400px;
+    border: solid 1px black;
+    border-radius: 6px;
+    padding: 10px
+}
+
+.session-form-main > * {
+    margin: 5px;
+}
+
+.session-form, .session-form-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-login-link {
+    text-align: center;
+}
