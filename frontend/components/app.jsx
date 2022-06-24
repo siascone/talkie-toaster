@@ -1,17 +1,19 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
+import NavbarContainer from './navbar/navbar_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import Splash from './splash/splash'
 const App = () => {
     return (
         <div id='app'>
-            <h1>Welcome to Talkie Toaster</h1>
-            <p>Talkie's the name, Toasting's the game... Would you like some toast?</p>
-
+            <NavbarContainer />
             <Switch>
                 <AuthRoute path='/login' component={LoginFormContainer} />
                 <AuthRoute path='/signup' component={SignupFormContainer} />
+                <Route exact path='/' component={Splash} />
+                <Redirect to='/' />
             </Switch>
         </div>
     )
