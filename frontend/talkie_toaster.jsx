@@ -5,6 +5,8 @@ import Root from './components/root'
 import { login, logout, signup } from './actions/session_actions';
 
 import configureStore from './store/store'
+import { fetchAllUsers, fetchUser } from './util/users_api_util';
+import { requestAllUsers, requestUser } from './actions/user_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
 
     window.store = store;
-    window.signup = signup;
-    window.login = login;
-    window.logout = logout;
+    window.requestAllUsers = requestAllUsers
+    window.requestUser = requestUser
+
 
     ReactDOM.render(<Root store={store}/>, root)
 })
