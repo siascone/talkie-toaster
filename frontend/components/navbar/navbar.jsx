@@ -15,13 +15,14 @@ class Navbar extends React.Component {
 
     render() {
 
-        let greeting;
+        let greeting, users;
 
         if (this.props.currentUser) {
             greeting = <div className='greeting-logged-in'>
                 <p className='greeting-message'>Welcome, {this.props.currentUser.username}</p>
                 <button className="logout-button" onClick={ this.handleLogout }>Logout</button>
             </div>
+            users = <Link to='/users' className='crew-link'>Meet the Crew!</Link>
         } else {
             greeting = <div className='greeting-logged-out'>
                 <Link to='/login'>Login</Link>
@@ -34,6 +35,7 @@ class Navbar extends React.Component {
                 <Link className='home-link' to='/'>
                     <div className="nav-left">
                         <p>Talkie Toaster</p>
+                        {users}
                     </div>
                 </Link>
                 <div className="nav-right">

@@ -7,6 +7,14 @@
     border-bottom: 1px solid black;
 }
 
+.nav-left {
+    display: flex;
+}
+
+.crew-link {
+    margin-left: 10px;
+}
+
 .greeting-logged-out, .greeting-logged-in {
     display: flex;
     justify-content: space-between;

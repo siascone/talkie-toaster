@@ -15,7 +15,7 @@
     justify-content: center;
 }
 
-.user-icon {
+.user-thumbnail {
     height: 50px;
     width: 50px;
     background-image: url("user_icon.png");
@@ -23,6 +23,9 @@
     border: 1px solid black;
     border-radius: 50%;
 }
+
+
+
 .user-index-item-card {
     display: flex;
     flex-direction: column;
@@ -34,7 +37,7 @@
     margin: 0 5px 10px 5px;
 }
 
-.icon-username {
+.thumbnail-username {
     display: flex;
     align-items: center;
 }
@@ -42,3 +45,56 @@
 .icon-username > h3 {
     margin-left: 5px;
 }
+
+.user-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-bio {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+.image-user-detials {
+    display: flex;
+    align-items: center;
+    // flex-direction: column;
+    // align-items: center;
+    padding: 10px;
+}
+
+.user-details {
+    margin-left: 10px;
+}
+
+.user-details > h2 {
+    margin: 0;
+}
+
+// .user-show-username {
+//     margin-left: ;
+// }
+
+.user-show-image {
+    height: 100px;
+    width: 100px;
+    background-image: url("user_icon.png");
+    background-size: contain;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.user-dashboard {
+    height: calc(100% - 220px);
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 0;
+}
+

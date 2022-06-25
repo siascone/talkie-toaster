@@ -28,7 +28,7 @@ class SessionForm extends React.Component {
         const user = Object.assign({}, this.state);
         
         this.props.processForm(user)
-            .then(() => this.props.history.push('/'))
+            .then(() => this.props.history.push('/users'))
 
         // if (this.props.history.location.pathname === '/upload') {
         //     this.props.loginDemoUser()
@@ -45,7 +45,7 @@ class SessionForm extends React.Component {
         e.preventDefault();
 
         this.props.loginDemoUser()
-            .then(() => this.props.history.push('/'))
+            .then(() => this.props.history.push('/users'))
     }
 
     renderErrors() {
