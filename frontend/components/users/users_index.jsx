@@ -15,7 +15,7 @@ class UsersIndex extends React.Component {
     render() {
         return (
             <div className='users-index-main'>
-                <h1>Meet the crew!</h1>
+                <h1>Meet the Crew!</h1>
                 <div className='users-index'>
                     {this.props.users.map((user) => {
                         return (
