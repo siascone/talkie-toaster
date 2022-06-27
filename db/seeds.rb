@@ -36,7 +36,7 @@ frank_t = User.create!(username: 'officerTodhunter', first_name: 'Frank', last_n
 harrison = User.create!(username: 'hologramHarrison', first_name: 'Ms.', last_name: 'Harrison', age: 25, password: 'reddwarf', email: 'hharrison@reddwarf.com')
 harris = User.create!(username: 'headbangerHarris', first_name: 'Headbanger', last_name: 'Harris', age: 25, password: 'reddwarf', email: 'hharris@reddwarf.com')
 henri = User.create!(username: 'navigationOfficerDubois', first_name: 'Henri', last_name: 'Dubois', age: 25, password: 'reddwarf', email: 'hdubois@reddwarf.com')
-hilly = User.create!(username: 'hilly', first_name: 'hilly', last_name: 'IQ 6000', age: 25, password: 'reddwarf', email: 'hilly@reddwarf.com')
+hilly = User.create!(username: 'hilly', first_name: 'Hilly', last_name: 'IQ 6000', age: 25, password: 'reddwarf', email: 'hilly@reddwarf.com')
 holly = User.create!(username: 'hol', first_name: 'Holly', last_name: 'IQ 6000', age: 25, password: 'reddwarf', email: 'holly@reddwarf.com')
 jim = User.create!(username: 'jLister', first_name: 'Jim', last_name: 'Lister', age: 25, password: 'reddwarf', email: 'jlister@reddwarf.com')
 karen = User.create!(username: 'drNewton', first_name: 'Karen', last_name: 'Newton', age: 25, password: 'reddwarf', email: 'knewton@reddwarf.com')
@@ -77,3 +77,6 @@ pinky = User.create!(username: 'skutterPinky', first_name: 'Pinky', last_name: '
 perky = User.create!(username: 'skutterPerky', first_name: 'Perky', last_name: 'Skutter', age: 25, password: 'reddwarf', email: 'perky@reddwarf.com')
 skutter_4457 = User.create!(username: 'skutter4457', first_name: '4457', last_name: 'Skutter', age: 25, password: 'reddwarf', email: '4457@reddwarf.com')
 
+Post.destroy_all
+
+post_1 = Post.create!(user_id: talkie.id, subject: 'To toast or not to toast...', body: 'Would you like some toast?')
